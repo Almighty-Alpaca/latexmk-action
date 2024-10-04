@@ -4,6 +4,11 @@ set -e
 
 command_string="latexmk"
 
+if [ -n "$ACTION_WORKING_DIRECTORY" ]
+then
+	cd "$ACTION_WORKING_DIRECTORY"
+fi
+
 if [ -f "latexmkrc" || -f ".latexmkrc" ]
 then
 	echo "latexmkrc file found"

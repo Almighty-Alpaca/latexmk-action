@@ -18,6 +18,10 @@ inputs:
     required: false
     default: ""
 
+  working-directory:
+    description: "Working directory"
+    required: false
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,6 +29,7 @@ runs:
     ACTION_FORMAT: ${{ inputs.format }}
     ACTION_FILENAME: ${{ inputs.filename }}
     ACTION_OPTIONS: ${{ inputs.options }}
+    ACTION_WORKING_DIRECTORY: ${{ inputs.working-directory }}
 
 branding:
   icon: 'book'
