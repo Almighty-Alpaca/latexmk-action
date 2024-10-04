@@ -9,7 +9,7 @@ then
 	cd "$ACTION_WORKING_DIRECTORY"
 fi
 
-if [ -f "latexmkrc" || -f ".latexmkrc" ]
+if [ -f "latexmkrc" ] || [ -f ".latexmkrc" ]
 then
 	echo "latexmkrc file found"
 else
